@@ -1,0 +1,51 @@
+//Const
+
+Const değişmeyen değer olarak adlandırıyoruz fakat
+const arr[]={};
+içerisinden pop edersek son eleman çıkmış olur.
+yani içerisnde ki elemanı etkilemiyor sadece isim olarak tutuyor
+Objeler için de aynı obje içerinde ki değişkenin değerini değişebiliriz.
+
+var : global scope / functional scope 
+yani 
+var x = 1;
+
+console.log(x);//1
+
+if( x === 1){
+ var x=10;
+ console.log(x);//10
+}
+
+console.log(x)//10;
+
+let: block scope
+süslü parantezler içerisinde olan her her alan scope
+
+let y = 1;
+
+console.log(y);//1
+
+if( y === 1){
+ let y=10;
+ console.log(y);//10
+}
+
+console.log(y)//1;
+
+//////////
+
+var x = 10;
+console.log(window.x);
+
+** var ile oluşturduğumuz da windows nesnesine ait propertye ait
+** let ile oluştuduğumuzda undefineddır.windows nesnesine bağlı değildir. 
+
+//Hoisting 
+yukarı çekme js yükselterek en başa alıyor
+//let ve constta bu özellik yoktur.
+
+// var x;
+//yukarıdan aşağıya doğru okuyor
+console.log(x);
+var x =10; //Undefined sonucunu alırız...
